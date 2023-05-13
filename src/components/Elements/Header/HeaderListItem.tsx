@@ -8,10 +8,10 @@ type props = {
 function HeaderListItem(props: props) {
   const { label, icon } = props;
   return (
-    <>
+    <li className="flex items-center h-10">
       {icon == true && <div>icon</div>}
       {props.label}
-    </>
+    </li>
   );
 }
 
