@@ -1,6 +1,7 @@
 import Card from "@/components/Elements/Card";
 import Header from "@/components/Elements/Header";
 import LocalHeader from "@/components/Elements/LocalHeader";
+import PinnedListCard from "@/components/Elements/PinnedListCard";
 import Image from "next/image";
 
 export default function Home() {
