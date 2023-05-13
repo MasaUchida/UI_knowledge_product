@@ -4,17 +4,15 @@ import HeaderImage from "./HeaderImage";
 
 function Header() {
   return (
-    <div className="h-full w-60">
+    <header className="h-full w-60 border-r border-solid border-black">
       <HeaderImage></HeaderImage>
-      <div className="flex flex-col h-full">
-        <ul className="h-full">
-          <HeaderListItem label="hogehoge"></HeaderListItem>
-          <HeaderListItem label="fugafuga"></HeaderListItem>
-          <HeaderListItem label="piyopiyo"></HeaderListItem>
-        </ul>
-        <div>setting</div>
-      </div>
-    </div>
+      <ul className="">
+        <HeaderListItem label="hogehoge"></HeaderListItem>
+        <HeaderListItem label="fugafuga"></HeaderListItem>
+        <HeaderListItem label="piyopiyo"></HeaderListItem>
+      </ul>
+      <div className="absolute bottom-0 h-10 px-4">setting</div>
+    </header>
   );
 }
 

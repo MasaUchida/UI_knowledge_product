@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex h-full ">
+    <main className="flex h-full">
       <Header></Header>
       <div className="flex w-full flex-col items-center">
         <LocalHeader></LocalHeader>
