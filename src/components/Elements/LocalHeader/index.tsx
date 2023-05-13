@@ -3,7 +3,7 @@ import { Primary, Text } from "@/components/Elements/Button";
 
 function LocalHeader() {
   return (
-    <div className="flex justify-between w-full p-4">
+    <div className="flex w-full justify-between border border-b-black p-4">
       <h2 className=" text-3xl">Title</h2>
       <ul className="flex items-center">
         <li>
