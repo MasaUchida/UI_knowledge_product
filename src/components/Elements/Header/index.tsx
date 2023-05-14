@@ -2,7 +2,7 @@ import React from "react";
 import HeaderListItem from "./HeaderListItem";
 import HeaderImage from "./HeaderImage";
 
-function Header() {
+export default function Header() {
   return (
     <header className="h-full w-60 border-r border-solid border-black">
       <HeaderImage></HeaderImage>
@@ -15,5 +15,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

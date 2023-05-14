@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 
 type props = {
   label: string;
   radius?: "none" | "sm" | "md";
+  eventHundler?: () => {};
 };
 
 export function Primary(props: props) {
@@ -15,7 +18,7 @@ export function Primary(props: props) {
           : radius == "sm"
           ? "rounded"
           : "rounded-none"
-      } bg-black text-white h-10 p-2`}
+      } h-10 bg-black p-2 text-white`}
     >
       {label}
     </button>
@@ -23,6 +26,16 @@ export function Primary(props: props) {
 }
 
 export function Text(props: props) {
-  const { label, ...rest } = props;
-  return <button className="h-10 text-white p-2">{label}</button>;
+  const { label, eventHundler } = props;
+
+  const clickHundle = () => eventHundler;
+
+  return (
+    <div className="flex items-center gap-1">
+      <div className="h-6 w-6 bg-black"></div>
+      <button className="h-10 p-2 text-black" onClick={clickHundle}>
+        {label}
+      </button>
+    </div>
+  );
 }
