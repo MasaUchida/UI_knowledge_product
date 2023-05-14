@@ -1,18 +1,21 @@
 import React from "react";
-import { Primary, Text } from "@/components/Elements/Button";
+import * as Button from "@/components/Elements/Button";
+import InputField from "@/components/Form/InputField";
 
 function LocalHeader() {
   return (
     <div className="flex w-full justify-between border border-b-black p-4">
       <h2 className=" text-3xl">Title</h2>
-      <ul className="flex items-center">
+      <ul className="flex items-center gap-2">
         <li>
-          <Primary label="hoge" radius="none"></Primary>
+          <Button.Text label="hoge"></Button.Text>
         </li>
         <li>
-          <Text label="textHoge"></Text>
+          <Button.Text label="textHoge"></Button.Text>
         </li>
-        <li>Search bar</li>
+        <li>
+          <InputField placeholder="search"></InputField>
+        </li>
       </ul>
     </div>
   );
