@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-type props = {
+type cardProps = {
   imageUrl?: string;
   imageAlt?: string;
   tag?: string;
@@ -9,7 +9,7 @@ type props = {
   created_at: Date;
 };
 
-function Card(props: props) {
+export function PostCard(props: cardProps) {
   const { imageUrl, imageAlt, tag, title, created_at } = props;
 
   return (
@@ -33,4 +33,19 @@ function Card(props: props) {
   );
 }
 
-export default Card;
+type favoriteCardProps = {
+  title: string;
+};
+
+export function FavoriteCard(props: favoriteCardProps) {
+  const { title } = props;
+
+  return (
+    <div className="flex h-40 w-40 flex-col items-center justify-center border border-solid border-black">
+      <div className=" flex h-14 w-14 items-center justify-center rounded-full bg-black">
+        <div className="text-white">icon</div>
+      </div>
+      <h3>{title}</h3>
+    </div>
+  );
+}
